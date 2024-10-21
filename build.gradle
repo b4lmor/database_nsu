@@ -1,0 +1,15 @@
+buildscript {
+	ext {
+		repos = {
+			mavenCentral()
+		}
+	}
+	repositories repos
+}
+
+configure(allprojects) {
+	repositories repos
+	buildscript {
+		repositories repos
+	}
+}

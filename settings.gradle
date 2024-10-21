@@ -1,0 +1,3 @@
+rootProject.name = 'database-nsu'
+
+include 'database'
