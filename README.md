@@ -24,3 +24,20 @@ cd ./database/scripts/migrations && touch V0001__create_tables.sql
 ```bash
 docker-compose -f ./database/docker/postgresql.yml -p docker restart postgres
 ```
+
+Docker (linux):
+
+- Install docker:
+```bash
+sudo apt-get purge docker-ce docker-ce-cli containerd.io && sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+- Start docker (optional)
+```bash
+systemctl start docker
+```
+
+- Show all containers
+```bash
+docker ps -a
+```
