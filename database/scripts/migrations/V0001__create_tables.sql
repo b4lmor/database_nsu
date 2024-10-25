@@ -1,3 +1,5 @@
+BEGIN;
+
 CREATE TABLE occupation
 (
     id          BIGINT PRIMARY KEY,
@@ -71,3 +73,5 @@ CREATE TABLE m2m_author_song
 COMMENT ON TABLE m2m_author_song IS 'Связующая таблица между авторами и песнями';
 COMMENT ON COLUMN m2m_author_song.author_id IS 'Идентификатор автора';
 COMMENT ON COLUMN m2m_author_song.song_id IS 'Идентификатор песни';
+
+COMMIT;
