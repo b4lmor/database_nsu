@@ -9,8 +9,8 @@ plugins {
 }
 
 flyway {
-    url = 'jdbc:postgresql://localhost:5432/music_shop'
-    user = 'postgres'
-    password = 'postgres'
+    url = 'jdbc:postgresql://localhost:5431/music_shop' // 38.114.102.218:5432/music_shop'
+    user = 'postgres' // 'admin'
+    password = 'postgres' // 'i_like_databases'
     locations = ['filesystem:scripts/migrations']
 }
