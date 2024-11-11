@@ -2,8 +2,8 @@ BEGIN;
 
 CREATE TABLE occupation
 (
-    id          BIGINT PRIMARY KEY,
-    description VARCHAR(30) NOT NULL
+    id          BIGSERIAL PRIMARY KEY,
+    description VARCHAR(128) NOT NULL
 );
 
 COMMENT ON TABLE occupation IS 'Таблица, содержащая информацию о родах занятий';
@@ -12,8 +12,8 @@ COMMENT ON COLUMN occupation.description IS 'Описание рода заня�
 
 CREATE TABLE author
 (
-    id            BIGINT PRIMARY KEY,
-    name          VARCHAR(30) NOT NULL,
+    id            BIGSERIAL PRIMARY KEY,
+    name          VARCHAR(128) NOT NULL,
     occupation_id BIGINT      NOT NULL,
     FOREIGN KEY (occupation_id) REFERENCES occupation (id)
 );
@@ -25,11 +25,9 @@ COMMENT ON COLUMN author.occupation_id IS 'Идентификатор рода �
 
 CREATE TABLE song
 (
-    id           BIGINT PRIMARY KEY,
-    name         VARCHAR(30) NOT NULL,
-    author_id    BIGINT      NOT NULL,
+    id           BIGSERIAL PRIMARY KEY,
+    name         VARCHAR(128) NOT NULL,
     release_date DATE        NOT NULL,
-    FOREIGN KEY (author_id) REFERENCES author (id)
 );
 
 COMMENT ON TABLE song IS 'Таблица, содержащая информацию о песнях';
@@ -40,8 +38,8 @@ COMMENT ON COLUMN song.release_date IS 'Дата релиза песни';
 
 CREATE TABLE disk
 (
-    id   BIGINT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL
+    id   BIGSERIAL PRIMARY KEY,
+    name VARCHAR(128) NOT NULL
 );
 
 COMMENT ON TABLE disk IS 'Таблица, содержащая информацию о дисках';
