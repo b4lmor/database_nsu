@@ -21,5 +21,4 @@ from "EMPLOYEES" e
 where c."COUNTRY_ID" in (select * from country_with_max_exp_emp)
   AND (select s.sum from sub_salaries s where s."MANAGER_ID" = e."EMPLOYEE_ID") =
       (select s.sum from sub_salaries s order by s.sum desc limit 1)
-group by C."COUNTRY_ID", e."EMPLOYEE_ID"
-;
+group by C."COUNTRY_ID", e."EMPLOYEE_ID";
