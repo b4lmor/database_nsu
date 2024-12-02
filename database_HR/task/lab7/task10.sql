@@ -13,3 +13,4 @@ from "EMPLOYEES" e
 join "DEPARTMENTS" d on e."DEPARTMENT_ID" = d."DEPARTMENT_ID" 
 group by d."DEPARTMENT_ID"
 having count(e."EMPLOYEE_ID") = (select employees_number from least_employees)
+order by department_id
