@@ -1,0 +1,16 @@
+buildscript {
+    dependencies {
+        classpath 'org.postgresql:postgresql:42.6.0'
+    }
+}
+
+plugins {
+    id 'org.flywaydb.flyway' version '9.21.0'
+}
+
+flyway {
+    url = 'jdbc:postgresql://localhost:5432/coin_db' // 38.114.102.218:5432/music_shop'
+    user = 'postgres'
+    password = 'postgres'
+    locations = ['filesystem:scripts/migrations']
+}

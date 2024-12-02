@@ -2,3 +2,4 @@ rootProject.name = 'database-nsu'
 
 include 'database'
 include 'database_HR'
+include 'database_coin'
