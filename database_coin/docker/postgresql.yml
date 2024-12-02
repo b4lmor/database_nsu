@@ -3,6 +3,8 @@ services:
   postgres:
     container_name: coin_db
     image: postgres:latest
+    volumes:
+      - ../volumes:/volumes
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
